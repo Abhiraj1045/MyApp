@@ -1,1 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+li.active{
+  border-bottom: 3px solid rgb(108, 108, 247);
+  color: rgb(108, 108, 247);
+}

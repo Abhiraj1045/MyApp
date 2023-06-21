@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'MyApp';
+
+  // serverList :{serverName:string, serverDescription:string}[]= []
+  // onServerCreationHandler(value:{serverName:string, serverDescription:string}){
+  //   this.serverList.push(value)
+  // }
+
+  // onBluePrintCreationHandler(value:{serverName:string, serverDescription:string}){
+  //   this.serverList.push(value)
+  // }
 }

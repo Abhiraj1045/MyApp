@@ -1,0 +1,33 @@
+<div class="container">
+
+  <div class="row">
+    <form #recipeForm  >
+    <div class="col-12 form-group">
+      <label for="recipeName">Recipe Name</label>
+      <input type="text" name="recipeName" class="form-control" id="recipeName">
+    </div>
+    <div class="col-12 form-group">
+      <label for="chefName">Chef Name</label>
+      <input type="text" name="chefName" class="form-control" id="chefName">
+    </div>
+    <div class="col-12 form-group">
+      <div class="col-6 inline-flex">
+      <label for="IncredientName">Incredient Name</label>
+      <input type="text" name="IncredientName" class="form-control" id="IncredientName" #incredient>
+      <button class="btn btn-warning mt-2" type="button" (click)="addIncredient(incredient.value);incredient.value=''">Add Incredient</button>
+    </div>
+    <div class="col-6 list-group mt-2 form-group" *ngIf="recipe.incredients?.length">
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let incredient of recipe.incredients">
+          {{incredient}}
+        </li>
+      </ul>
+    </div>
+
+    </div>
+    <div class="col-12 pt-3">
+      <button class="btn btn-secondary" type="button" (click)="addRecipe(recipeForm.value)"> Save Recipe</button>
+    </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="container">
+ <app-game-control (onCounterIncrement)="counterIncrement($event)"></app-game-control>
+</div>
+
+<div class="container">
+  <div class="d-print-block" *ngFor="let counter  of counterList">
+      <app-counter>
+          <div class="card text-start">
+            <!-- <img class="card-img-top" src="holder.js/100px180/" alt="Title"> -->
+            <div class="card-body" [ngClass]="{ 'odd':counter%2==0 ,'even':counter%2==1  }">
+              <h4 class="card-title">{{counter%2==0?'Even':'Odd'}}</h4>
+              <p class="card-text">{{counter}}</p>
+            </div>
+          </div>
+      </app-counter>
+  </div>
+</div>
